@@ -16,7 +16,7 @@ let answer = await inquirer.prompt([
     message:"Select one of the operators to perform operation",
     type:"list",
     name:"operators",
-    choices:["Addition","Subraction","Multiplication","Division","Remender"],
+    choices:["Addition","Subraction","Multiplication","Division"],
   }
 ]);
 //   conditions
@@ -31,9 +31,6 @@ else if (answer.operators === "Multiplication"){
 }
 else if(answer.operators === "Division"){
     console.log(answer.firstNumber / answer.secondNumber);
-}
-else if(answer.operators === "Remender"){
-    console.log(answer.firstNumber % answer.secondNumber);
 }
 else{
     console.log("Please select the valid operator");
